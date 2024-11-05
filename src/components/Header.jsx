@@ -105,7 +105,7 @@ function Header() {
   );
 
   return (
-    <div className="bg-gradient-to-b from-[#351D5B] to-[#272727] h-fit px-6 md:px-[5%] relative">
+    <div className="bg-gradient-to-b  from-[#351D5B] to-[#272727] h-fit px-6 md:px-[5%] relative">
       {/* Navbar */}
       <nav className="flex justify-between items-center py-4 text-[#FAFAFA]">
         <motion.img
