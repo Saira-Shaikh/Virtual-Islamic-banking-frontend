@@ -1,5 +1,5 @@
 import Button from "../ui/Button";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -106,7 +106,7 @@ const Products = () => {
                 }`}
               >
                 <span>Know More</span>
-                <FaArrowRight />
+                <FaLongArrowAltRight />
               </a>
             </motion.div>
           ))}
