@@ -139,7 +139,7 @@ const Blogs = () => {
         </div>
 
         {/* Right Subscription Form */}
-        <div className="flex bg-[#444444] rounded-3xl z-10 md:flex-row gap-2 md:gap-4 justify-between items-center w-full lg:w-[40%] lg:mt-16">
+        <div className="flex md:bg-[#444444] rounded-3xl flex-col z-10 md:flex-row gap-2 md:gap-4 justify-between items-center w-full lg:w-[40%] lg:mt-16">
           <input
             type="email"
             placeholder="Enter your email address"
