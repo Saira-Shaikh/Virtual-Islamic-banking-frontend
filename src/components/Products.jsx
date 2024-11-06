@@ -6,28 +6,28 @@ import { motion } from "framer-motion";
 const cards = [
   {
     id: 1,
-    src: "/src/assets/p1.png",
+    src: "./p1.png",
     title: "Virtual Islamic Bank",
     description:
       "The Islamic Fintech industry provides ways of Shariah-compliant virtual digital, transparent, easy, and quick..",
   },
   {
     id: 2,
-    src: "/src/assets/p2.png",
+    src: "./p2.png",
     title: "Shariah Compliant Marketplace",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...",
   },
   {
     id: 3,
-    src: "/src/assets/p3.png",
+    src: "./p3.png",
     title: "Islamic Edtech",
     description:
       "The online learning industry is growing quite fast, as it easiest, cost effective, time saving",
   },
   {
     id: 4,
-    src: "/src/assets/p4.png",
+    src: "./p4.png",
     title: "Product Advisory",
     description:
       "Strategic partnership that provides vital insights for informed decision-making in product development an..",
@@ -40,12 +40,12 @@ const Products = () => {
       {/* Background Images */}
       <div className="w-fit h-fit gap-10 py-[5%] relative flex flex-col bg-[#1F1F1F] lg:flex-row items-center justify-center">
         <img
-          src="/src/assets/Group 236.png"
+          src="./Group 236.png"
           alt=""
           className="absolute top-0 left-0 w-fit h-fit object-cover z-0"
         />
         <img
-          src="/src/assets/Rectangle 25.png"
+          src="./Rectangle 25.png"
           alt=""
           className="absolute top-0 left-0 w-[full] lg:w-[683px] lg:h-fit h-full object-cover z-0"
         />

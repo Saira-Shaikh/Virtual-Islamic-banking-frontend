@@ -7,28 +7,28 @@ const Services = () => {
   const cards = [
     {
       id: 1,
-      imgSrc: "/src/assets/s1.png",
+      imgSrc: "./s1.png",
       title: "Digital Financing",
       description:
         "This term refers to the impact of new technologies on the financial services industry. It includes a variety of products, applications that have transformed the traditional way.",
     },
     {
       id: 2,
-      imgSrc: "/src/assets/s2.png",
+      imgSrc: "./s2.png",
       title: "Digital Investment",
       description:
         "This is a digital solution that allows customers to save and invest money in stocks, shares, and investment funds through an automated platform.",
     },
     {
       id: 3,
-      imgSrc: "/src/assets/s3.png",
+      imgSrc: "./s3.png",
       title: "Digital SME Commercial",
       description:
         "This product caters to the SME sector and provides long-term financing for infrastructure development and industrial projects.",
     },
     {
       id: 4,
-      imgSrc: "/src/assets/s4.png",
+      imgSrc: "./s4.png",
       title: "Low Cost Housing Finance",
       description:
         "This product provides digital solutions for low-cost housing finance schemes. This creates employment and boosts demand in industries.",
@@ -102,12 +102,12 @@ const Services = () => {
           className="relative mt-10 px-4 md:px-10 py-32 bg-[#302148] shadow-lg rounded-3xl w-full flex flex-col h-fit items-center text-center"
         >
           <img
-            src="/src/assets/Vector (1).png"
+            src="./Vector (1).png"
             alt="background vector"
             className="absolute bottom-0 right-0 w-fit opacity-50 z-0"
           />
           <img
-            src="/src/assets/Rectangle 25.png"
+            src="./Rectangle 25.png"
             alt="background rectangle"
             className="absolute top-0 left-0 w-[300px] md:w-[500px] h-full opacity-50 z-0 object-cover"
           />

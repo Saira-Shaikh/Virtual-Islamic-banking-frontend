@@ -15,7 +15,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }} // Duration of the animation
         >
           <img
-            src="/src/assets/logo.png"
+            src="./logo.png"
             alt="Logo"
             className="ml-4 mb-4 w-[24px] h-[24px]"
           />

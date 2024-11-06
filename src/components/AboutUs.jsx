@@ -14,7 +14,7 @@ const AboutUs = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1 }}
-          className="bg-[url('/src/assets/Frame.png')] w-[182px] h-[177px] absolute left-[43%] top-[65%] transform -translate-x-1/2 z-0"
+          className="bg-[url('./Frame.png')] w-[182px] h-[177px] absolute left-[43%] top-[65%] transform -translate-x-1/2 z-0"
         ></motion.div>
 
         {/* Text Content */}
@@ -72,7 +72,7 @@ const AboutUs = () => {
         >
           <img
             className="w-full max-w-[717px] h-auto"
-            src="/src/assets/VideoSection.png"
+            src="./VideoSection.png"
             alt=""
           />
         </motion.div>
@@ -92,7 +92,7 @@ const AboutUs = () => {
             whileHover={{ rotate: 360 }}
             transition={{ duration: 1 }}
             width={120}
-            src={`/src/assets/Group ${src}.png`}
+            src={`./Group ${src}.png`}
             alt=""
           />
         ))}

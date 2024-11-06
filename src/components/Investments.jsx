@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 const Investments = () => {
   return (
-    <div className="relative bg-center w-full min-h-[400px] flex lg:flex-row flex-col items-center justify-between px-4 md:px-10 pt-32 pb-16 gap-4 bg-[#1F1F1F] bg-[url('/src/assets/Group 236.png')]">
+    <div className="relative bg-center w-full min-h-[400px] flex lg:flex-row flex-col items-center justify-between px-4 md:px-10 pt-32 pb-16 gap-4 bg-[#1F1F1F] bg-[url('./Group 236.png')]">
       <img
-        src="/src/assets/Group 236.png"
+        src="./Group 236.png"
         alt=""
         className="absolute top-0 left-0 w-fit h-fit object-cover z-0"
       />
@@ -18,7 +18,7 @@ const Investments = () => {
         transition={{ duration: 1 }}
       >
         <img
-          src="/src/assets/img.png"
+          src="./img.png"
           alt="Investment"
           className="w-full max-w-1/2 h-auto object-contain"
         />

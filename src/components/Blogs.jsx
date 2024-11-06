@@ -7,15 +7,15 @@ const Blogs = () => {
   let blogs = [
     {
       id: 1,
-      src: "/src/assets/b1.png",
+      src: "./b1.png",
     },
     {
       id: 2,
-      src: "/src/assets/b2.png",
+      src: "./b2.png",
     },
     {
       id: 3,
-      src: "/src/assets/b3.png",
+      src: "./b3.png",
     },
   ];
 
@@ -63,7 +63,7 @@ const Blogs = () => {
             key={blog.id}
             className="relative bg-cover bg-center rounded-lg p-6 h-[469.53px] flex flex-col justify-end"
             style={{
-              backgroundImage: `url(/src/assets/b${blog.id}.png)`,
+              backgroundImage: `url(./b${blog.id}.png)`,
             }}
             initial={{ scale: 0, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -114,12 +114,12 @@ const Blogs = () => {
         }} // Delay for the subscription section
       >
         <img
-          src="/src/assets/Vector (2).png"
+          src="./Vector (2).png"
           alt="background vector"
           className="absolute bottom-0 left-0 md:left-10 w-[50%] lg:w-fit h-auto opacity-50 z-0"
         />
         <img
-          src="/src/assets/Rectangle 25.png"
+          src="./Rectangle 25.png"
           alt="background rectangle"
           className="absolute bottom-0 right-0 w-[200px] md:w-[300px] h-full opacity-50 z-0 object-cover"
         />

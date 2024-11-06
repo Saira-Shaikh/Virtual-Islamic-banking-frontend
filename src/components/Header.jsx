@@ -109,7 +109,7 @@ function Header() {
       {/* Navbar */}
       <nav className="flex justify-between items-center py-4 text-[#FAFAFA]">
         <motion.img
-          src="/src/assets/logo.png"
+          src="./logo.png"
           alt="logo"
           className="w-14 h-14"
           initial={{ scale: 0 }}
@@ -149,7 +149,7 @@ function Header() {
         transition={{ type: "spring", stiffness: 300 }}
       >
         <div className="flex justify-between items-center mb-6">
-          <img src="/src/assets/logo.png" alt="logo" className="w-12 h-12" />
+          <img src="./logo.png" alt="logo" className="w-12 h-12" />
           <AiOutlineClose
             size={24}
             className="cursor-pointer text-white"
@@ -218,7 +218,7 @@ function Header() {
           transition={{ type: "spring", stiffness: 100, duration: 0.5 }}
         >
           <img
-            src="/src/assets/headerImg.png"
+            src="./headerImg.png"
             alt=""
             className="w-full h-full object-contain"
           />
