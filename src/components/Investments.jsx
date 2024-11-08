@@ -4,14 +4,15 @@ import { motion } from "framer-motion";
 
 const Investments = () => {
   return (
-    <div className="relative bg-center w-full min-h-[400px] flex lg:flex-row flex-col items-center justify-between px-4 md:px-10 pt-32 pb-16 gap-4 bg-[#1F1F1F] bg-[url('./Group 236.png')]">
+    <section className="relative bg-center w-full min-h-[400px] flex lg:flex-row flex-col items-center justify-between px-4 md:px-10 pt-32 pb-16 gap-4 bg-[#1F1F1F] bg-[url('./Group 236.png')]">
       <img
         src="./Group 236.png"
-        alt=""
+        alt="Background"
         className="absolute top-0 left-0 w-fit h-fit object-cover z-0"
       />
-      {/* Left Div - Image */}
-      <motion.div
+
+      {/* Left Section - Image */}
+      <motion.section
         className="flex-shrink-0 mb-6 md:mb-0 md:w-1/2 flex justify-center"
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -22,10 +23,10 @@ const Investments = () => {
           alt="Investment"
           className="w-full max-w-1/2 h-auto object-contain"
         />
-      </motion.div>
+      </motion.section>
 
-      {/* Right Div - Content */}
-      <motion.div
+      {/* Right Section - Content */}
+      <motion.article
         className="w-full lg:w-1/2 items-center flex flex-col lg:items-start text-white"
         initial={{ y: 30, opacity: 0 }} // Initial state for animation
         animate={{ y: 0, opacity: 1 }} // Final state for animation
@@ -46,7 +47,7 @@ const Investments = () => {
           className="text-4xl font-bold my-2"
         >
           Our Digital Products on <br />
-          <span className="text-[#D8B150]"> Deposit or investments</span>
+          <span className="text-[#D8B150]">Deposit or investments</span>
         </motion.h1>
 
         <motion.p
@@ -68,7 +69,7 @@ const Investments = () => {
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-            className="flex items-center mb-2 "
+            className="flex items-center mb-2"
           >
             <span className="w-4 h-4 bg-[#D8B150] rounded-full mr-2"></span>
             Current
@@ -77,7 +78,7 @@ const Investments = () => {
             initial={{ y: -75, x: 25, opacity: 0 }}
             whileInView={{ y: 0, x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center mb-2 "
+            className="flex items-center mb-2"
           >
             <span className="w-4 h-4 bg-[#D8B150] rounded-full mr-2"></span>
             Saving
@@ -86,7 +87,7 @@ const Investments = () => {
             initial={{ y: -100, x: 25, opacity: 0 }}
             whileInView={{ y: 0, x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center mb-2 "
+            className="flex items-center mb-2"
           >
             <span className="w-4 h-4 bg-[#D8B150] rounded-full mr-2"></span>
             Fixed Deposit
@@ -95,7 +96,7 @@ const Investments = () => {
             initial={{ y: -125, x: 25, opacity: 0 }}
             whileInView={{ y: 0, x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="flex items-center mb-2 "
+            className="flex items-center mb-2"
           >
             <span className="w-4 h-4 bg-[#D8B150] rounded-full mr-2"></span>
             Sukuk
@@ -104,8 +105,8 @@ const Investments = () => {
 
         {/* Button */}
         <Button content="Get Started" />
-      </motion.div>
-    </div>
+      </motion.article>
+    </section>
   );
 };
 

@@ -3,6 +3,7 @@ import Button from "../ui/Button";
 import { CgPlayButton, CgMenuRight } from "react-icons/cg";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
+import ThreeDModel from "../components/ThreeDModel";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -105,7 +106,7 @@ function Header() {
   );
 
   return (
-    <div className="bg-gradient-to-b  from-[#351D5B] to-[#272727] h-fit px-6 md:px-[5%] relative">
+    <header className="bg-gradient-to-b  from-[#351D5B] to-[#272727] h-fit px-6 md:px-[5%] relative">
       {/* Navbar */}
       <nav className="flex justify-between items-center py-4 text-[#FAFAFA]">
         <motion.img
@@ -118,22 +119,24 @@ function Header() {
         />
 
         {/* Links and Contact Button */}
-        <div className="hidden md:flex gap-8 items-center">{navLinks}</div>
+        <section className="hidden md:flex gap-8 items-center">
+          {navLinks}
+        </section>
         <Button className={"hidden lg:inline-flex"} content="Contact" />
 
         {/* Hamburger Icon for Sidebar on Mobile */}
-        <motion.div whileHover={{ rotate: 90 }}>
+        <motion.button whileHover={{ rotate: 90 }}>
           <CgMenuRight
             size={32}
             className="md:hidden cursor-pointer"
             onClick={() => setMenuOpen(true)}
           />
-        </motion.div>
+        </motion.button>
       </nav>
 
       {/* Sidebar Overlay */}
       {menuOpen && (
-        <motion.div
+        <motion.aside
           className="fixed inset-0 bg-black bg-opacity-50 z-20"
           onClick={() => setMenuOpen(false)}
           initial={{ opacity: 0 }}
@@ -142,8 +145,8 @@ function Header() {
       )}
 
       {/* Sidebar (Slide in from Right) */}
-      <motion.div
-        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-[#351D5B] to-[#272727] p-6 z-30`}
+      <motion.section
+        className="fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-[#351D5B] to-[#272727] p-6 z-30"
         initial={{ x: "100%" }}
         animate={{ x: menuOpen ? "0%" : "100%" }}
         transition={{ type: "spring", stiffness: 300 }}
@@ -160,16 +163,16 @@ function Header() {
           {navLinks}
           <Button content="Contact" />
         </nav>
-      </motion.div>
+      </motion.section>
 
       {/* Header Content */}
-      <motion.div
+      <motion.section
         className="flex flex-col pb-10 md:flex-row items-center justify-center min-h-[300px] md:min-h-[400px] relative px-4 md:px-[5%] pt-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <motion.div
+        <article
           className="md:w-1/2 lg:w-[745px] space-y-4 text-center md:text-left"
           initial={{ x: -200 }}
           animate={{ x: 0 }}
@@ -208,11 +211,11 @@ function Header() {
               />
             </motion.div>
           </div>
-        </motion.div>
+        </article>
 
         {/* Header Right Image */}
-        <motion.div
-          className="w-full md:w-[751.15px] h-[300px] md:h-auto mt-8 md:mt-0"
+        <motion.section
+          className="w-full md:w-[751.15px] h-[300px] md:h-auto mt-8 relative md:mt-0"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 100, duration: 0.5 }}
@@ -222,9 +225,13 @@ function Header() {
             alt=""
             className="w-full h-full object-contain"
           />
-        </motion.div>
-      </motion.div>
-    </div>
+          {/* 3D Model Overlay */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <ThreeDModel />
+          </div>
+        </motion.section>
+      </motion.section>
+    </header>
   );
 }
 

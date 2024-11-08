@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../ui/Button";
 import { motion } from "framer-motion";
-
+import withAnalytics from "../hoc/withAnalytics";
 const Services = () => {
   // Sample data for cards
   const cards = [
@@ -36,9 +36,9 @@ const Services = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center bg-[#272727] text-white py-12 px-4 md:px-[5%]">
-      <div className="w-full flex flex-col justify-center items-center">
-        <div className="text-center flex flex-col justify-center items-center mb-10">
+    <section className="flex flex-col items-center bg-[#272727] text-white py-12 px-4 md:px-[5%]">
+      <section className="w-full flex flex-col justify-center items-center">
+        <header className="text-center flex flex-col justify-center items-center mb-10">
           <motion.h2
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -59,12 +59,12 @@ const Services = () => {
               Virtual Islamic & Digital Banking
             </span>
           </motion.h1>
-        </div>
+        </header>
 
         {/* Responsive Grid for Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 w-full">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 w-full">
           {cards.map((card, index) => (
-            <motion.div
+            <motion.article
               key={card.id}
               className="bg-[#313131] text-white rounded-md shadow-lg flex flex-col justify-center text-center items-center p-6"
               initial={{ scale: 0, opacity: 0 }}
@@ -82,20 +82,20 @@ const Services = () => {
               <p className="text-sm md:text-[16px] font-medium leading-relaxed">
                 {card.description}
               </p>
-            </motion.div>
+            </motion.article>
           ))}
-        </div>
+        </section>
 
-        <motion.div
+        <motion.section
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.8 }}
         >
           <Button content={"All Services"} />
-        </motion.div>
+        </motion.section>
 
         {/* Call to Action Section */}
-        <motion.div
+        <motion.section
           initial={{ y: 50 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 1, delay: 1 }}
@@ -130,18 +130,19 @@ const Services = () => {
               Work with Greensfin, more than a fintech company, currently on a
               mission to transform the global business infrastructure.
             </motion.p>
-            <motion.div
+            <motion.section
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{ duration: 0.8 }}
             >
               <Button className={`w-fit`} content="Book Your Consultation" />
-            </motion.div>
+            </motion.section>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.section>
+      </section>
+    </section>
   );
 };
 
-export default Services;
+const ServicesWithAnalytics = withAnalytics(Services);
+export default ServicesWithAnalytics;

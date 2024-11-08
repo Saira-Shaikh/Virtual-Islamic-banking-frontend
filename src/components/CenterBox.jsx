@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 
 const CenterBox = ({ className }) => {
   return (
-    <motion.div
+    <motion.section
       initial={{ scale: 0.8, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 1 }}
@@ -28,7 +28,7 @@ const CenterBox = ({ className }) => {
         Submit your details, our representative will be in touch soon.
       </motion.p>
 
-      <motion.div
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
@@ -58,19 +58,19 @@ const CenterBox = ({ className }) => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         />
-        <motion.div
+        <motion.section
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="w-full flex flex-center  -mt-8 rounded-3xl"
+          className="w-full flex flex-center -mt-8 rounded-3xl"
         >
           <Button
             className="rounded-lg p-2 lg:p-4 w-full mt-0"
             content={"Get A Quote"}
           />
-        </motion.div>
-      </motion.div>
-    </motion.div>
+        </motion.section>
+      </motion.section>
+    </motion.section>
   );
 };
 

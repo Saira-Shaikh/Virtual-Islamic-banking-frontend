@@ -5,10 +5,27 @@ import { motion } from "framer-motion"; // Import motion from framer-motion
 const Footer = () => {
   return (
     <footer className="bg-[#1F1F1F] text-white py-12 px-6 md:px-10">
+      {/* JSON-LD Schema for Website */}
+      <script type="application/ld+json">
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "#",
+          "name": "Virtual Islamic Banking",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.example.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        `}
+      </script>
+
       {/* Upper Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:flex-row justify-between items-start gap-10 pb-8 border-b border-gray-600">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:flex-row justify-between items-start gap-10 pb-8 border-b border-gray-600">
         {/* Column 1 - Logo and Social Icons */}
-        <motion.div
+        <motion.article
           className="flex flex-col items-start space-y-4"
           initial={{ opacity: 0, y: 20 }} // Initial state
           whileInView={{ opacity: 1, y: 0 }} // Animate to this state
@@ -23,7 +40,7 @@ const Footer = () => {
             Virtual Islamic/ Digital Banking and payment platforms to asset
             management
           </p>
-          <div className="flex space-x-4">
+          <nav className="flex space-x-4">
             <motion.a
               href="https://facebook.com"
               target="_blank"
@@ -60,11 +77,11 @@ const Footer = () => {
                 size={24}
               />
             </motion.a>
-          </div>
-        </motion.div>
+          </nav>
+        </motion.article>
 
         {/* Column 2 - Quick Links */}
-        <motion.div
+        <motion.article
           className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,10 +92,10 @@ const Footer = () => {
           <span className="block">Shariah Marketplace</span>
           <span className="block">Islamic Edtech</span>
           <span className="block">Product Advisory</span>
-        </motion.div>
+        </motion.article>
 
         {/* Column 3 - Quick Links */}
-        <motion.div
+        <motion.article
           className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,10 +107,10 @@ const Footer = () => {
           <span className="block">Knowledge Center</span>
           <span className="block">Clients</span>
           <span className="block">About Us</span>
-        </motion.div>
+        </motion.article>
 
         {/* Column 4 - Resources */}
-        <motion.div
+        <motion.article
           className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,11 +132,11 @@ const Footer = () => {
               Housing Authority, Karachi,
             </span>
           </div>
-        </motion.div>
-      </div>
+        </motion.article>
+      </section>
 
       {/* Lower Section - Copyright */}
-      <motion.div
+      <motion.section
         className="text-center pt-6"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -128,7 +145,7 @@ const Footer = () => {
         <p className="text-gray-400">
           Copyright © 2023 Sheikh. All rights reserved.
         </p>
-      </motion.div>
+      </motion.section>
     </footer>
   );
 };

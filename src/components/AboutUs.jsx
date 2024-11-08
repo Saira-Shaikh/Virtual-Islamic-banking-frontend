@@ -5,20 +5,20 @@ import CenterBox from "./CenterBox";
 
 const AboutUs = () => {
   return (
-    <div className="bg-[#272727] h-fit items-center py-4 lg:py-0 px-4 md:px-16 relative">
+    <section className="bg-[#272727] h-fit items-center py-4 lg:py-0 px-4 md:px-16 relative">
       <CenterBox className="" />
 
-      <div className="flex flex-col lg:flex-row gap-4 justify-center items-center relative">
+      <article className="flex flex-col lg:flex-row gap-4 justify-center items-center relative">
         {/* Background Image */}
-        <motion.div
+        <motion.figure
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1 }}
           className="bg-[url('./Frame.png')] w-[182px] h-[177px] absolute left-[43%] top-[65%] transform -translate-x-1/2 z-0"
-        ></motion.div>
+        ></motion.figure>
 
         {/* Text Content */}
-        <motion.div
+        <motion.section
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -61,10 +61,10 @@ const AboutUs = () => {
           >
             <Button className="font-[400] w-fit" content={"Know More"} />
           </motion.div>
-        </motion.div>
+        </motion.section>
 
         {/* Right Image */}
-        <motion.div
+        <motion.figure
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -73,31 +73,30 @@ const AboutUs = () => {
           <img
             className="w-full max-w-[717px] h-auto"
             src="./VideoSection.png"
-            alt=""
+            alt="Video Section"
           />
-        </motion.div>
-      </div>
+        </motion.figure>
+      </article>
 
       {/* Group Images */}
-      <motion.div
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         className="flex w-full justify-center items-center py-10 flex-wrap"
       >
         {[257, 258, 259, 260, 261, 262].map((src) => (
-          <motion.img
+          <motion.figure
             key={src}
             initial={{ rotate: 0 }}
             whileHover={{ rotate: 360 }}
             transition={{ duration: 1 }}
-            width={120}
-            src={`./Group ${src}.png`}
-            alt=""
-          />
+          >
+            <img width={120} src={`./Group ${src}.png`} alt={`Group ${src}`} />
+          </motion.figure>
         ))}
-      </motion.div>
-    </div>
+      </motion.section>
+    </section>
   );
 };
 

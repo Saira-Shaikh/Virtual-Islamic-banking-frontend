@@ -20,9 +20,26 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="bg-[#272727] text-white py-12 md:px-[5%] px-6">
+    <section className="bg-[#272727] text-white py-12 md:px-[5%] px-6">
+      {/* JSON-LD Schema for Blog Posts */}
+      <script type="application/ld+json">
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "The Future of Islamic Fintech",
+          "description": "A deep dive into the role of fintech in the future of Islamic finance.",
+          "author": {
+            "@type": "Person",
+            "name": "Saira Shaikh"
+          },
+          "datePublished": "2024-11-05",
+          "url": "#"
+        }
+        `}
+      </script>
       {/* Header Section */}
-      <motion.div
+      <motion.header
         className="w-full flex flex-col justify-center z-10 font-[300] text-[27px] text-center lg:text-left items-center lg:items-start lg:mt-[200px]"
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -54,12 +71,12 @@ const Blogs = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt. finance and Islamic banking industry.
         </motion.p>
-      </motion.div>
+      </motion.header>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {blogs.map((blog, index) => (
-          <motion.div
+          <motion.article
             key={blog.id}
             className="relative bg-cover bg-center rounded-lg p-6 h-[469.53px] flex flex-col justify-end"
             style={{
@@ -72,7 +89,7 @@ const Blogs = () => {
             <button className="bg-[#D8B150] text-[#FFFFFF] text-[20px] leading-[24.38px] font-sans rounded-full py-[12.02px] font-[600] w-fit px-8 absolute top-8 right-8">
               Tech
             </button>
-            <div className={`rounded-lg p-4`}>
+            <article className={`rounded-lg p-4`}>
               <h2 className="text-xl font-semibold">
                 Lorem ipsum dolor sit amet
               </h2>
@@ -86,23 +103,23 @@ const Blogs = () => {
               >
                 Know More <FiArrowRight className="ml-2" />
               </a>
-            </div>
-          </motion.div>
+            </article>
+          </motion.article>
         ))}
-      </div>
+      </section>
 
       {/* Button */}
-      <motion.div
+      <motion.section
         className="flex justify-center mb-10"
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.5 }}
       >
         <Button content="View All Blogs" />
-      </motion.div>
+      </motion.section>
 
       {/* Subscription Section */}
-      <motion.div
+      <motion.section
         className="relative mt-10 px-4 md:px-32 py-10 justify-between lg:flex-row bg-[#302148] shadow-lg rounded-3xl w-full flex flex-col h-fit items-center lg:items-start"
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -124,7 +141,7 @@ const Blogs = () => {
           className="absolute bottom-0 right-0 w-[200px] md:w-[300px] h-full opacity-50 z-0 object-cover"
         />
         {/* Left Text Section */}
-        <div className="items-center flex flex-col lg:items-left z-10 mb-4 lg:mb-0">
+        <section className="items-center flex flex-col lg:items-left z-10 mb-4 lg:mb-0">
           <h2 className="text-white text-[32px] border-b-4 text-center lg:text-start rounded-sm w-fit border-[#D8B150]">
             Newsletter
           </h2>
@@ -136,10 +153,10 @@ const Blogs = () => {
               <br /> Product{" "}
             </span>
           </h1>
-        </div>
+        </section>
 
         {/* Right Subscription Form */}
-        <div className="flex md:bg-[#444444] rounded-3xl flex-col z-10 md:flex-row gap-2 md:gap-4 justify-between items-center w-full lg:w-[40%] lg:mt-16">
+        <section className="flex md:bg-[#444444] rounded-3xl flex-col z-10 md:flex-row gap-2 md:gap-4 justify-between items-center w-full lg:w-[40%] lg:mt-16">
           <input
             type="email"
             placeholder="Enter your email address"
@@ -148,9 +165,9 @@ const Blogs = () => {
           <button className="bg-[#D8B150] text-[#FFFFFF] text-[20px] leading-[24.38px] font-sans rounded-full py-[12.02px] font-[600] w-fit px-8 ">
             Subscribe
           </button>
-        </div>
-      </motion.div>
-    </div>
+        </section>
+      </motion.section>
+    </section>
   );
 };
 
