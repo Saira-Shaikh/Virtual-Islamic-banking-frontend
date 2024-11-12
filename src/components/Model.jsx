@@ -3,10 +3,10 @@ import { useGLTF, useTexture, Decal } from "@react-three/drei";
 
 export function HandModel(props) {
   const imageTexture = useTexture("./mobileDisplay.png");
-  const { nodes, material, geometry } = useGLTF("./models/handModel.glb");
+  const { nodes } = useGLTF("./models/hand.glb");
   console.log(imageTexture);
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={3.75}>
       <group position={[1.473, 0.856, -4.39]} scale={0.01}>
         <group position={[1.797, -0.842, -215.255]} rotation={[0, -0.285, 0]}>
           <group
@@ -68,10 +68,7 @@ export function HandModel(props) {
                     rotation={[0, 0, 0]} // Adjust rotation if needed
                     scale={[1.5, 1.5, 1.5]} // Increase scale if needed to avoid cutting
                     map={imageTexture}
-                    transparent
                     opacity={1} // Set opacity to see through decal if needed
-                    polygonOffset
-                    polygonOffsetFactor={1}
                   />
                 </mesh>
               </group>
@@ -83,4 +80,4 @@ export function HandModel(props) {
   );
 }
 
-useGLTF.preload("/handModel.glb");
+useGLTF.preload("/hand.glb");
